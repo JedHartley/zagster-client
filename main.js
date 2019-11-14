@@ -1,4 +1,4 @@
 $(updateView)
 function updateView(){
-    alert("Using jQuery!")
+    alert("Zagster Data")
 }
