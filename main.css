@@ -17,12 +17,12 @@ text-align: center;
 }
 
 div {
-    padding-top: 50px;
+    padding-top: 20px;
     padding-right: 30px;
     padding-bottom: 50px;
     padding-left: 80px;
   }
-  
+ 
   .center {
     display: block;
     margin-left: auto;
