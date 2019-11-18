@@ -8,17 +8,7 @@
     integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
     crossorigin="anonymous"></script>
     <script src="main.js"></script>
-    <!-- unsure about this below -->
-    <script src="https://zagster-service.herokuapp.com"></script>
-<script>
-        $("button").click(function(){
-        $.getJSON("https://zagster-service.herokuapp.com", function(result){
-          $.each(result, function(i, field){
-            $("div").append(field + " ");
-          });
-        });
-      });</script>
-      <!-- upsure about this above -->
+    
 </head>
 <body>
 <div class="Top">
@@ -26,7 +16,7 @@
 </div>
 
 <div class="Middle">
-<h2>TODO</h2>
+<h2 id="rideCount">TODO</h2>
 </div>
 
 <div class="Total">
