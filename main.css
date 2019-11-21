@@ -40,3 +40,12 @@ div {
     width: 50%;
   }
   
+  .chartContainer {
+    height: 75%;
+    width: 75%;
+    float: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left:auto;
+    margin-right:auto;
+    border:3px solid #FC6600;
