@@ -88,15 +88,15 @@ var chart = new Chart(ctx, {
     type: 'line',
 
     // The data for our dataset
-    data: {
-        labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July','August','September','October','November','December'],
-        datasets: [{
-            label: 'Total Zagster Rides Per Year',
-            backgroundColor: 'rgb(255, 102, 0)',
-            borderColor: 'rgb(250, 249, 249)',
-            data: [0, 10, 5, 2, 20, 30, 45,30,20,2,5,15]
-        }]
-    },
+    // data: {
+    //     labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July','August','September','October','November','December'],
+    //     datasets: [{
+    //         label: 'Total Zagster Rides Per Year',
+    //         backgroundColor: 'rgb(255, 102, 0)',
+    //         borderColor: 'rgb(250, 249, 249)',
+    //         data: [0, 10, 5, 2, 20, 30, 45,30,20,2,5,15]
+    //     }]
+    // },
 
     // Configuration options go here
     options: {}
