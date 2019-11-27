@@ -43,7 +43,7 @@ div {
   .chartContainer {
     height: 75%;
     width: 75%;
-    float: center;
+    /* float: center; */
     margin-top: 50px;
     margin-bottom: 50px;
     margin-left:auto;
