@@ -13,15 +13,20 @@ body {
     transition: none;
 }  
 
-
-  h2 {
-    font-size: 2em; text-align: center;
-}
 h1{
     text-align: center;
     background: linear-gradient(to top, #ff6600 0%, #000000 75%);
     color: white;
 }
+
+h2 {
+  font-size: 2em; text-align: center;
+}
+
+h3{
+  text-align: center;
+}
+
 p {
 text-align: center;
 }
