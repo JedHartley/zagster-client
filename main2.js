@@ -1,13 +1,49 @@
+// // function updateView(){
+// //     alert("Zagster Data")
+// // }
+// // // // "const" a memory location that never changes is a constant
+// // // // const PI = 3.14159
+// // // // //jQuery command. "$" Wait until the webpage loads call the function whos name is in the parantheses
+// // // // //function call means run the code
+// // // // //$(greeter)
+
+// // // // //call function add(use it-make it run)
+// // // // add(2,3);
+// // // // // greeter is the function identifier. name is the functions argument (info it need to do its job)
+// // // // function add(num1, num2){
+// // // //   answer = num1 + num2;
+// // // //   console.log("The answer is:" + answer);
+// // // //   return answer;
+// // // // }
+
+// // // // function greeter(name){
+// // // //   alert("Welcome to "+ name + " Data Visualization")
+// // // // }
+// // // // greeter("Jed Hartley's")
+
+// // // // var person = {name: "Jed", age:38, car: {model: "Toyota", year: 2011} }
+// // // // console.log ("My name is " + person.name)
+// // // // console.log ("my age is " + person.age)
+// // // // console.log ("My car model is " + person.car.model)
+
+// // // // if (person.age > 35){
+// // // //   alert("You're Old!")
+// // // // }
+
+
 // a constant's value can never change.
 const BASE_URL = "https://zagster-service.herokuapp.com"
 
 //call function updateView() after the page loads
 $(updateView)
-$(updateView2)
+
 
 //Arrays to hold data points pulled from JQUERY
 var my_data = []
-
+let years = []
+let months2016 = []
+let months2017 = []
+let months2018 = []
 
 //updateView() function definition
 //this function gets JSON data from the web server endpoint /rides/count/per_month and calls the function perYear()
@@ -17,15 +53,12 @@ function updateView() {
   $.when ($.getJSON(BASE_URL + "/rides/count/per_month", perYear), 
     ).then(updateChart);
 }
-function updateView2() {
-    $.getJSON(BASE_URL + "/rides/count" , updateRideCount)
-  }
+
 
 function updateRideCount(data) {
     numberOfRides = data.count
     $("h2#rideCount").html(numberOfRides)
     console.log(data)
-    
   }
 // This is what your JSON data looks like given the endpoint /rides/count/per_month 
 //If you type https://zagster-service.herokuapp.com/rides/count/per_month in your web browser, you'll see this data
@@ -46,62 +79,12 @@ function perYear(data) {
     //extracting data for each month.We need to  specify which array element and then specify the key before we can get the data for that key
     //So data2016[0][9] means look at the zero-ith array element {"9":220} and extract the data associated the key 9
     //result should be 220 
-    // console.log(data2016[0][9]) //print data to the console to make sure we did it right
-    // my_data.push(data2016[0][9]) //add the data to the my_data array 
-    // console.log(data2016[1][10])  //looks at the one-ith array element {"10":141} extract data for key 10
-    // my_data.push(data2016[1][10]) 
-    // console.log(data2016[2][11])
-    // my_data.push(data2016[2][11])
-    // console.log(data2016[3][12])
-    // my_data.push(data2016[3][12]) 
-    
-    // //2017
-    // console.log(data2017[0][1])
-    // my_data.push(data2017[0][1])
-    // console.log(data2017[1][2])
-    // my_data.push(data2017[1][2])
-    // console.log(data2017[2][3])
-    // my_data.push(data2017[2][3])
-    // console.log(data2017[3][4])
-    // my_data.push(data2017[3][4])
-    // console.log(data2017[4][5])
-    // my_data.push(data2017[4][5])
-    // console.log(data2017[5][6])
-    // my_data.push(data2017[5][6])
-    // console.log(data2017[6][7])
-    // my_data.push(data2017[6][7])
-    // console.log(data2017[7][8])
-    // my_data.push(data2017[7][8])
-    // console.log(data2017[8][9])
-    // my_data.push(data2017[8][9])
-    // console.log(data2017[9][10])
-    // my_data.push(data2017[9][10])
-    // console.log(data2017[10][11])
-    // my_data.push(data2017[10][11])
-    // console.log(data2017[11][12])
-    // my_data.push(data2017[11][12])
-    
-    // //2018
-    console.log(data2018[0][1])
-    my_data.push(data2018[0][1])
-    console.log(data2018[1][2])
-    my_data.push(data2018[1][2])
-    console.log(data2018[2][3])
-    my_data.push(data2018[2][3])
-    console.log(data2018[3][4])
-    my_data.push(data2018[3][4])
-    console.log(data2018[4][5])
-    my_data.push(data2018[4][5])
-    console.log(data2018[5][6])
-    my_data.push(data2018[5][6])
-    console.log(data2018[6][7])
-    my_data.push(data2018[6][7])
-    console.log(data2018[7][8])
-    my_data.push(data2018[7][8])
-    console.log(data2018[8][9])
-    my_data.push(data2018[8][9])
-    console.log(data2018[9][10])
-    my_data.push(data2018[9][10])
+    console.log(data2016[0][9]) //print data to the console to make sure we did it right
+    my_data.push(data2016[0][9]) //add the data to the my_data array 
+    console.log(data2016[1][10])  //looks at the one-ith array element {"10":141} extract data for key 10
+    my_data.push(data2016[1][10]) 
+    console.log(data2016[2][11])
+    my_data.push(data2016[2][11])
     //add the data to the my_data array 
     //keep going to get all data points
 
@@ -122,9 +105,9 @@ function updateChart() {
 
         // The data for our dataset
         data: {
-            labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July','August','September','October'],
+            labels: ['September', 'October'],
             datasets: [{
-                label: 'Zagster Number of Rides Per Month in 2018',
+                label: 'Zagster Number of Rides Per Month in 2016',
                 backgroundColor: 'rgb(255, 102, 0)',
                 borderColor: 'rgb(250, 249, 249)',
                 //data: [0, 10, 5, 2, 20, 30, 45]
